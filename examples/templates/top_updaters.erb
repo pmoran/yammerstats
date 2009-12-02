@@ -1,0 +1,6 @@
+<% COLOURS = %w(AFD8F8, F6BD0F, 8BBA00, FF8E46, 008E8E, D64646, 8E468E, 588526, B3AA00, 008ED6, 9D080D, A186BE) %>
+<graph caption='Top Yammer Updaters' xAxisName='Users' yAxisName='Updates' showNames='1' decimalPrecision='0' formatNumberScale='0' rotateNames="1">
+<% users[0..12].sort_by{|u| u.name }.each_with_index do |user, i| %>
+  <set name='<%= user.name %>' value='<%= user.stats.updates %>' color='<%=COLOURS[i]%>' />
+<% end %>	
+</graph>    

@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
+ 
+require 'optparse'
+require 'yammerstats'
+
+OPTIONS = {
+  :config  => 'oauth.yml',
+  :stat => "top_updaters"
+}
+
+ARGV.options do |o|
+  script_name = File.basename($0)
+  
+  o.set_summary_indent('  ')
+  o.banner =    "Usage: #{script_name} [OPTIONS]"
+  o.define_head "Generate stats for your Yammer network"
+  o.separator   ""
+  
+  o.on("-c", "--config=val", String, "oauth config file", "Default: #{OPTIONS[:config]}") do |c|
+     OPTIONS[:config] = c
+  end
+  o.on("-s", "--stat=val", String, "Stat to run", "Default: #{OPTIONS[:stat]}") do |s|
+     OPTIONS[:stat] = s
+  end
+  o.on("-t", "--template=val", String, "Erb template file") do |t|
+    OPTIONS[:template] = t
+  end
+  o.on("-o", "--output=val", String, "Output file") do |o|
+     OPTIONS[:output] = o
+   end
+  o.on("-d", "--dump", "Dump results to the screen, rather than an output file") do |d|
+     OPTIONS[:dump] = d
+  end
+  o.on("--stub", "Stub Yammer client for testing purposes") do |s|
+     OPTIONS[:stub] = s
+  end
+  
+  o.separator ""
+
+  o.on_tail("-h", "--help", "Show this help message.") { puts o; exit }
+  o.parse!
+end
+
+require File.expand_path(File.dirname(__FILE__) + "../../lib/ext/yammer/client") if OPTIONS[:stub]
+
+stats = Yammer::Stats.new(:config => OPTIONS[:config], :verbose => false)
+stats.send(OPTIONS[:stat], OPTIONS)

@@ -1,0 +1,12 @@
+[ 
+{
+"timezone":"Sydney","interests":null,"type":"user","contact": {"im":{"provider":"aim","username":""},"email_addresses": [{"type":"primary","address":"r.maldon@diuscomputing.com.au"} ],
+"phone_numbers":[]},"hire_date":null,"location":null,"guid":null,"job_title":"Software Craftsman","network_id":42785,"schools":[],"kids_names":null,"significant_other":null,"web_url":"https://www.yammer.com/diuscomputing.com.au/users/r-maldon","network_domains":["diuscomputing.com.au"],"id":481091,"mugshot_url":"https://assets3.yammer.com/user_uploaded/photos/p1/0044/5440/the-real-shaq_small.jpg","stats":{"updates":21,"following":31,"followers":32},"external_urls":[],
+"full_name":"THE_REAL_SHAQ","name":"r-maldon","url":"https://www.yammer.com/api/v1/users/481091","expertise":null,"summary":null,"previous_companies":[],"birth_date":"","network_name":"diuscomputing.com.au","state":"active"
+},
+{
+"timezone":"Melbourne","interests":null,"type":"user","contact":{"im":{"provider":"aim","username":""},"email_addresses":[{"type":"primary","address":"w.godfrey@diuscomputing.com.au"}],"phone_numbers":[{"type":"mobile","number":"0408409465"}]},"hire_date":null,"location":null,"guid":null,"job_title":"Developer","network_id":42785,"schools":[],"kids_names":null,"significant_other":null,"web_url":"https://www.yammer.com/diuscomputing.com.au/users/w-godfrey","network_domains":["diuscomputing.com.au"],
+"id":394365,"mugshot_url":"https://assets3.yammer.com/images/no_photo_small.gif","stats":{"updates":3,"following":27,"followers":38},"external_urls":[],
+"full_name":"Warner Godfrey","name":"x-godfrey","url":"https://www.yammer.com/api/v1/users/394365","expertise":null,"summary":null,"previous_companies":[],"birth_date":"","network_name":"diuscomputing.com.au","state":"active"
+}
+]
