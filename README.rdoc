@@ -10,9 +10,9 @@ The first usage has been focused on generating 3D column charts using http://www
 
 == SYNOPSIS:
 
-yammerstats uses yammer4r to query a Yammer network. In fact it uses my forked version! (http://github.com/pmoran/yammer4r). You will need to follow the steps described by yammer4r to register an application and create a credentials config file.
+yammerstats uses yammer4r to query a Yammer network. You will need to follow the steps described by yammer4r to register an application and create a credentials config file.
 
-* gem install pmoran-yammer4r
+* gem install yammer4r
 * ruby yammer4r/bin/yammer_create_oauth_yml.rb (and follow instructions in the script)
 
 To run a stats request, use:
