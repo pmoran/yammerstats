@@ -18,5 +18,18 @@ Spec::Rake::SpecTask.new("rcov:spec") do |t|
   end
 end
 
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "yammerstats"
+    gemspec.summary = "Fetch some (possibly) useful info from your Yammer domain"
+    gemspec.description = "Fetches Yammer information and outputs it to the format of your choice, using Erb templates."
+    gemspec.email = "workingpeter@gmail.com"
+    gemspec.homepage = "http://github.com/pmoran/yammerstats"
+    gemspec.authors = ["Peter Moran"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler"
+end
 
 task :default => [:spec]
