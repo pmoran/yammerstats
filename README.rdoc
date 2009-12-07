@@ -12,7 +12,7 @@ The first usage has been focused on generating 3D column charts using http://www
 
 yammerstats uses yammer4r to query a Yammer network. You will need to follow the steps described by yammer4r to register an application and create a credentials config file.
 
-* gem install yammer4r
+* gem install yammerstats
 * ruby yammer4r/bin/yammer_create_oauth_yml.rb (and follow instructions in the script)
 
 To run a stats request, use:
@@ -27,6 +27,5 @@ Run the default (and currently only) stat top_updaters, generating an xml file t
 
 == TODO
 
-* Gemify
 * Add possibly useful stats
 * Heat map of user posts - when is a user posting?
