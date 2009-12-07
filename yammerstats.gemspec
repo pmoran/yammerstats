@@ -45,6 +45,8 @@ Gem::Specification.new do |s|
      "spec/yammer/stats_spec.rb"
   ]
 
+  s.add_dependency('yammer4r', '>= 0.1.5')
+
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
