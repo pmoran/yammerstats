@@ -1,4 +1,5 @@
 module Yammer
+  
   class Client
     
     def users(options = {})
@@ -11,5 +12,6 @@ module Yammer
     end
     
   end
+  
 end
 
